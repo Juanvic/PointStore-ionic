@@ -1,0 +1,28 @@
+<div class="col-xs-12">
+	<div class="row">
+		<h1 class="titulo">Minhas compras</h1>
+	</div>
+ 	<div class="row">
+ 		<div class="col-md-12 well">
+			<div ng-controller="lojasController">
+				<table class="table table-hover table-condensed">
+					<tr>
+						<th>#</th>
+						<th>Tipo</th>
+						<th>Vendedor</th>
+						<th>Quantidade</th>
+						<th>Valor</th>
+					</tr>
+					<tr ng-repeat="x in listaCompras">
+						<td>{{ $index + 1 }}</td>
+						<td>{{ x.titulo }}</td>
+						<td>{{ x.vendedor }}</td>
+						<td>{{ x.qtd_pontos }}</td>
+						<td>{{x.valor | currency:'R$'}}<br></td>
+					</tr>
+				</table>
+
+			</div>
+ 		</div>
+ 	</div>
+</div>

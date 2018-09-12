@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+<html lang="pt-br" ng-app="sistemaVendaDePontosDeVantagem">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PointStore</title>
+	<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="lib/angular.min.js"></script>
+    <script src="lib/angular-resource.js"></script>
+    <script src="lib/angular-cookies.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="js/app-login.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/controller/login/loginController.js"></script>
+    <script src="js/controller/usuario/usuarioController.js"></script>
+</head>
+<body>
 
-    <link rel="manifest" href="manifest.json">
 
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
+<div class="boxFull col-xs-12">
+	<div class="boxLogin col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+		<div ng-view></div>
+	</div>
+</div>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+<footer class="footer col-xs-12" id="footer">
+    <div class="container">
+        <div class="contato col-xs-12 col-sm-6 col-md-8">
+            <h2>Suporte</h2>
+        </div>
+        <div class="redesociais col-xs-12 col-sm-6 col-md-4">
+            <h2>Redes Sociais</h2>
+                <a href="">
+                	<img src="img/icone-facebook.PNG" alt="Facebook">
+                </a>
+				<a href="">
+                    <img src="img/icone-twitter.PNG" alt="Twitter">                    
+                </a>
+        </div> 
+    </div>
+</footer>
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-  </head>
-
-  <body ng-app="starter">
-    <ion-nav-view></ion-nav-view>
-  </body>
+</body>
 </html>
